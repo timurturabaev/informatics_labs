@@ -28,7 +28,7 @@ bool resize(subvector *vp, unsigned int new_capacity) {
         elements_to_copy = new_capacity;
     }
 
-    for (unsigned int i = 0; i < elements_to_copy; ++i) {
+    for (int i = 0; i < elements_to_copy; i++) {
         new_mas[i] = vp->mas[i];
     }
 
