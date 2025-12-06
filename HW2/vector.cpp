@@ -7,7 +7,8 @@ public:
     T *mas;
     unsigned int top;
     unsigned int capacity;
-    
+
+    // Список инициализации лучше
     subvector() {
         top = 0;
         capacity = 0;
@@ -17,7 +18,7 @@ public:
     ~subvector() {
         delete[] mas;
     }
-    
+    // Список инициализации
     subvector(const subvector& other) {
         top = other.top;
         capacity = other.capacity;
@@ -47,7 +48,8 @@ public:
         }
         return *this;
     }
-    
+
+    // Список инициализации
     subvector(subvector&& other) {
         mas = other.mas;
         top = other.top;
@@ -123,6 +125,7 @@ public:
 
 using vector = subvector<int>;
 
+// Профайлер не проверялся?
 int main() {
     vector sv{};
     sv.resize(5);
